@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0 0;
+            padding: 0 0;
+        }
+      .margin-centre,
+        .flex-centre,
+        .grid-centre {
+            margin-bottom: 25px;
+            border: 1px solid blanchedalmond;
+            width: 100%;
+            height: 40vh;
+        }
+
+        .margin-centre {
+            position: relative;
+        }
+
+        .flex-centre {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-centre {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            grid-column-gap: 30px;
+            grid-row-gap: 50px;
+        }
+
+        .centre-object {
+            background-color: blueviolet;
+            width: 100px;
+            height: 100px;
+        }
+
+        .margin-centre .centre-object {
+            position: absolute;
+            margin: auto auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .grid-centre .centre-object {
+            grid-column: 1 / 13;
+            align-self: center;
+            justify-self: center;
+        }
+    </style>
+    <main>
+      <div class="margin-centre">
+            <div class="centre-object">
+
+            </div>
+        </div>
+        <div class="flex-centre">
+            <div class="centre-object">
+                
+            </div>
+        </div>
+        <div class="grid-centre">
+            <div class="centre-object">
+
+            </div> 
+        </div>
+    </main>
+</body>
+</html>
